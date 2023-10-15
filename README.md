@@ -113,3 +113,22 @@ public class LowerBoundedWildcard {
     }
 }
 ```
+
+### The wildcard ? itself, without any bounds (?)
+
+Represents an unknown type, and it's often used when you want to work with a collection of unknown generic type.
+
+```java
+public static void processList(List<?> list) {
+    for (Object item : list) {
+        System.out.println(item);
+    }
+}
+```
+
+In this case, processList can accept a list of any type, but you can't add elements to it (except for null), as the exact type is unknown. 
+
+It's useful when you only need to read from the collection.
+
+Wildcards provide flexibility when working with generic types and allow you to write more generic and reusable code.
+
