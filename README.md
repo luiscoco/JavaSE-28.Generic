@@ -60,8 +60,8 @@ There are two types of wildcards: an upper-bounded wildcard (? extends T) and a 
 
 Let's explore both with examples.
 
-
 ### Upper-bounded Wildcard (? extends T):
+In this example, ? extends Number allows the method sumOfList to accept a list of any type that is a subclass of Number (e.g., Integer, Double).
 
 ```java
 import java.util.List;
@@ -88,4 +88,28 @@ public class UpperBoundedWildcard {
 }
 ```
 
+### Lower-bounded Wildcard (? super T):
+In this example, ? super Integer allows the method addIntegers to accept a list of any type that is a superclass of Integer (e.g., Number). 
 
+This is useful when you want to add elements to a list.
+
+```java
+import java.util.ArrayList;
+import java.util.List;
+
+public class LowerBoundedWildcard {
+    // Method to add integers to a list
+    public static void addIntegers(List<? super Integer> list) {
+        list.add(1);
+        list.add(2);
+        list.add(3);
+    }
+
+    public static void main(String[] args) {
+        // Using lower-bounded wildcard with a list of numbers
+        List<Number> numbers = new ArrayList<>();
+        addIntegers(numbers);
+        System.out.println("List of Numbers: " + numbers);
+    }
+}
+```
