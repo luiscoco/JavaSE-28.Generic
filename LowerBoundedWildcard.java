@@ -9,10 +9,17 @@ public class LowerBoundedWildcard {
         list.add(3);
     }
 
+    public static void processList(List<?> list) {
+        for (Object item : list) {
+            System.out.println("Hola Luis elemento: " + item);
+        }
+    }
+    
     public static void main(String[] args) {
         // Using lower-bounded wildcard with a list of numbers
         List<Number> numbers = new ArrayList<>();
         addIntegers(numbers);
         System.out.println("List of Numbers: " + numbers);
+        processList(numbers);
     }
 }
