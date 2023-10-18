@@ -1,7 +1,7 @@
 import java.util.List;
 
 public class UpperBoundedWildcard {
-    // Method to calculate the sum of numbers in a list
+    // Method to calculate the sum of numbers in a list.
     public static double sumOfList(List<? extends Number> list) {
         double sum = 0.0;
         for (Number number : list) {
