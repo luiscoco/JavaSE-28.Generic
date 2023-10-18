@@ -19,9 +19,15 @@ jobs:
         distribution: 'adopt'
         java-version: '11'
 
-    - name: Build with Maven
+    - name: Build1 with Maven
       run: |
         javac UpperBoundedWildcard.java
-    - name: Run tests
+    - name: Run1 tests
       run: |
         java UpperBoundedWildcard
+    - name: Build2 with Maven
+      run: |
+        javac LowerBoundedWildcard.java
+    - name: Run2 tests
+      run: |
+        java LowerBoundedWildcard
