@@ -1,5 +1,7 @@
 # JavaSE-Generics
 
+See the Udemy course: https://www.udemy.com/course/curso-certificacion-profesional-desarrollador-java-se-11
+
 Generics in Java allow you to create classes, interfaces, and methods that operate on parameters without committing to a specific data type. 
 This enhances code reusability and type safety. Let's take a look at a simple example using a generic class.
 
